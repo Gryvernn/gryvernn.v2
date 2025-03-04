@@ -127,7 +127,7 @@ body {
 
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .credit {
@@ -201,7 +201,7 @@ body {
     max-width: 90%;
     max-height: 90%;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Close Button */
