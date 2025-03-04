@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Bienvenue sur Gryvernn</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="warning-popup" class="popup">
-    <div class="popup-content">
-        <h2>Contenu explicite</h2>
-        <p>Ce site contient du contenu explicite (NSFW). Il est réservé à un public majeur (18+). En cliquant sur "Entrer", vous confirmez être majeur.</p>
-        <button id="enter-button">Entrer</button>
-        <button id="exit-button">Quitter</button>
+<div class="container">
+    <img id="bouncing-image" src="img/welcome.webp" alt="Bouncing Image"><p></p>
+    <h1 class="welcome-text">Welcome to my website, <br> All art belong to the credited artists</h1>
+    <div class="buttons">
+        <a href="https://t.me/gryvernn" class="button telegram" target="_blank">
+            <img src="img/tg.ico" alt="Telegram">
+        </a>
+        <a href="https://paypal.me/jizoh13" class="button paypal" target="_blank">
+            <img src="img/paypal.ico" alt="PayPal">
+        </a>
     </div>
+    <a href="gallery.html" class="gallery-link">Enter Gallery</a>
 </div>
-<header>
-    <h1>Bienvenue chez Gryvernn</h1>
-</header>
-<main>
-    <p>Salut ! Voici un petit site minimaliste pour partager mon univers.</p>
-    <nav>
-        <a href="images.html">Images</a>
-        <a href="story.html">Histoire</a>
-    </nav>
-</main>
+
+
 <script src="script.js"></script>
 </body>
 </html>
