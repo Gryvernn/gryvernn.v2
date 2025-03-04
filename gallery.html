@@ -9,40 +9,70 @@
 </head>
 <body>
 <div class="gallery-container">
-  <a href="index.html" class="gallery-link">Home</a>
   <h1>Drax's Commissions</h1>
-
+  <a href="index.html" class="home-link">Back home</a>
+  <br>
   <h2>SFW Gallery</h2>
   <div class="gallery">
     <div class="image-container">
-      <img src="sfw1.jpg" alt="SFW Art 1" class="zoomable">
-      <a href="https://artist-link1.com" target="_blank" class="credit">Art by Artist 1</a>
+      <img src="img/sfw/gryv.webp" alt="SFW Art 1" class="zoomable">
+      <a href="https://t.me/Mintycola" target="_blank" class="credit">© MintyCola</a>
     </div>
     <div class="image-container">
-      <img src="sfw2.jpg" alt="SFW Art 2" class="zoomable">
-      <a href="https://artist-link2.com" target="_blank" class="credit">Art by Artist 2</a>
+      <img src="img/sfw/comikn.webp" alt="SFW Art 2" class="zoomable">
+      <a href="https://t.me/Mintycola" target="_blank" class="credit">© MintyCola</a>
+    </div>
+    <div class="image-container">
+      <img src="img/sfw/gryvref.webp" alt="SFW Art 3" class="zoomable">
+      <a href="https://t.me/novasart" target="_blank" class="credit">© NovaByte</a>
+    </div>
+    <div class="image-container">
+      <img src="img/sfw/headshotpetpuma.webp" alt="SFW Art 4" class="zoomable">
+      <a href="https://t.me/petpuma" target="_blank" class="credit">© PetPuma</a>
+    </div>
+    <div class="image-container">
+      <img src="img/sfw/Tsunteacomm.webp" alt="SFW Art 5" class="zoomable">
+      <a href="https://t.me/Tsuntea" target="_blank" class="credit">!WIP! © TsunTea</a>
+    </div>
+    <div class="image-container">
+      <img src="img/sfw/wipmoth.webp" alt="SFW Art 6" class="zoomable">
+      <a href="https://t.me/TheMothbeeArt" target="_blank" class="credit">© Mothbee</a>
     </div>
   </div>
 
 
   <h2>🔞 NSFW Gallery</h2>
+
   <div id="age-check">
     <label for="dob">Enter your date of birth:</label>
     <input type="date" id="dob">
     <button onclick="checkAge()">Submit</button>
+    <p><strong>WARNING: This section contains gore!</strong></p>
   </div>
-
+  <p>
+  <button class="hide-button" onclick="hideNSFW()">Hide NSFW Gallery</button>
+  </p>
   <div id="nsfw-gallery" class="gallery hidden">
+
     <div class="image-container">
-      <img src="nsfw1.jpg" alt="NSFW Art 1" class="zoomable">
-      <a href="https://artist-link3.com" target="_blank" class="credit">Art by Artist 3</a>
+      <img src="img/nsfw/comirocket.webp" alt="NSFW Art 1" class="zoomable">
+      <a href="https://spudnikmutt.straw.page/" target="_blank" class="credit">© SpudnikMutt</a>
     </div>
     <div class="image-container">
-      <img src="nsfw2.jpg" alt="NSFW Art 2" class="zoomable">
-      <a href="https://artist-link4.com" target="_blank" class="credit">Art by Artist 4</a>
+      <img src="img/nsfw/mawshot.webp" alt="NSFW Art 2" class="zoomable">
+      <a href="https://t.me/two_art_rascals" target="_blank" class="credit">© Two Art Rascals</a>
+    </div>
+    <div class="image-container">
+      <img src="img/nsfw/comboo.webp" alt="NSFW Art 3" class="zoomable">
+      <a href="https://t.me/booficent/" target="_blank" class="credit">© Booficent</a>
+    </div>
+    <div class="image-container">
+      <img src="img/nsfw/wipdenn.webp" alt="NSFW Art 1" class="zoomable">
+      <a href="https://t.me/DennDart" target="_blank" class="credit">!WIP! © Denn</a>
     </div>
   </div>
 </div>
+
 
 <!-- Zoom Modal -->
 <div id="zoom-modal" class="hidden">
@@ -50,6 +80,6 @@
   <img id="zoomed-img" src="" alt="Zoomed Image">
 </div>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

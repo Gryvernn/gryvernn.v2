@@ -1,4 +1,3 @@
-// Function to check age for NSFW section
 function checkAge() {
     let dobInput = document.getElementById("dob").value;
     if (!dobInput) {
@@ -16,18 +15,29 @@ function checkAge() {
     }
 
     if (age >= 18) {
-        document.getElementById("nsfw-gallery").classList.remove("hidden");
+        let nsfwGallery = document.getElementById("nsfw-gallery");
+        if (nsfwGallery) {
+            nsfwGallery.classList.remove("hidden");
+        }
 
-        // Hide the age check section smoothly
         let ageCheckDiv = document.getElementById("age-check");
-        ageCheckDiv.style.transition = "opacity 0.5s ease-out";
-        ageCheckDiv.style.opacity = "0";
+        if (ageCheckDiv) {
+            ageCheckDiv.style.transition = "opacity 0.5s ease-out";
+            ageCheckDiv.style.opacity = "0";
 
-        setTimeout(() => {
-            ageCheckDiv.style.display = "none";
-        }, 500);
+            setTimeout(() => {
+                ageCheckDiv.style.display = "none";
+            }, 500);
+        }
     } else {
         alert("You must be 18 or older to view this content.");
+    }
+}
+
+function hideNSFW() {
+    let nsfwGallery = document.getElementById("nsfw-gallery");
+    if (nsfwGallery) {
+        nsfwGallery.classList.add("hidden");
     }
 }
 
@@ -36,25 +46,28 @@ const images = document.querySelectorAll(".zoomable");
 const modal = document.getElementById("zoom-modal");
 const modalImg = document.getElementById("zoomed-img");
 
-// Open Zoom on Click
 images.forEach(img => {
     img.addEventListener("click", () => {
-        modal.classList.add("show");
-        modalImg.src = img.src;
+        if (modal && modalImg) {
+            modal.classList.add("show");
+            modalImg.src = img.src;
+        }
     });
 });
 
-// Close Zoom
 function closeZoom() {
-    modal.classList.remove("show");
+    if (modal) {
+        modal.classList.remove("show");
+    }
 }
 
-// Close Modal on Click Outside or ESC Key
-modal.addEventListener("click", (e) => {
-    if (e.target !== modalImg) {
-        closeZoom();
-    }
-});
+if (modal) {
+    modal.addEventListener("click", (e) => {
+        if (e.target !== modalImg) {
+            closeZoom();
+        }
+    });
+}
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {

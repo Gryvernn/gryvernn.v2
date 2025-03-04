@@ -83,6 +83,16 @@ body {
     border-radius: 8px;
     transition: background 0.3s;
 }
+.home-link {
+    display: inline-block;
+    margin: 25px;
+    padding: 10px 20px;
+    background: #498ecf;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
 
 .gallery-link:hover {
     background: #1d3c7a;
@@ -97,9 +107,20 @@ body {
     border-radius: 10px;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
 .gallery img {
-    width: 200px;
-    margin: 10px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 8px;
     transition: transform 0.3s;
 }
@@ -109,16 +130,8 @@ body {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
 
-/* Image Container */
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Artist Credit Links */
 .credit {
+    display: block;
     margin-top: 5px;
     font-size: 14px;
     color: #1e1f22;
@@ -212,6 +225,30 @@ body {
     visibility: visible;
 }
 
+.hide-button {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin: 15px auto;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hide-button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+
+.hidden {
+    display: none;
+}
 
 /* 📱 Responsive Design */
 @media (max-width: 768px) {
@@ -227,10 +264,6 @@ body {
     .button img {
         width: 30px;
         height: 30px;
-    }
-
-    .gallery img {
-        max-width: 150px;
     }
 
     #zoom-modal img {
@@ -254,10 +287,6 @@ body {
         height: 28px;
     }
 
-    .gallery img {
-        max-width: 130px;
-    }
-
     #zoom-modal img {
         max-width: 95%;
         max-height: 70%;
@@ -274,5 +303,20 @@ body {
 @media (max-width: 480px) {
     .welcome-text {
         font-size: 18px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery img {
+        max-width: 150px;
+    }
+
+    .credit {
+        font-size: 12px;
     }
 }
